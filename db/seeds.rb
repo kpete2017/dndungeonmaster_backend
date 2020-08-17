@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Region.destroy_all
 Note.destroy_all
 Npc.destroy_all
 Player.destroy_all
@@ -192,4 +193,13 @@ Note.create({
     title: "Dont forget",
     message: "Horribly Murder Jeff for showing up late",
     user_id: user1.id,
+})
+
+Region.create({
+    plane: "Material",
+    continent: "Ferun",
+    area: "Waterdeep Outskirts",
+    climate: "Temperate",
+    terrain: "Forest",
+    user_id: user1.id
 })
