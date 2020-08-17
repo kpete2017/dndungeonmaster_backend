@@ -10,19 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_190421) do
+ActiveRecord::Schema.define(version: 2020_08_15_224908) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "notes", force: :cascade do |t|
     t.string "title"
     t.string "message"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "npcs", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "name"
     t.string "subtitle"
     t.string "race"
@@ -50,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_190421) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "name"
     t.string "subtitle"
     t.string "race"
@@ -77,15 +80,6 @@ ActiveRecord::Schema.define(version: 2020_08_17_190421) do
     t.index ["user_id"], name: "index_players_on_user_id"
   end
 
-  create_table "states", force: :cascade do |t|
-    t.integer "player_id", null: false
-    t.integer "npc_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["npc_id"], name: "index_states_on_npc_id"
-    t.index ["player_id"], name: "index_states_on_player_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "name"
@@ -98,6 +92,4 @@ ActiveRecord::Schema.define(version: 2020_08_17_190421) do
   add_foreign_key "notes", "users"
   add_foreign_key "npcs", "users"
   add_foreign_key "players", "users"
-  add_foreign_key "states", "npcs"
-  add_foreign_key "states", "players"
 end
