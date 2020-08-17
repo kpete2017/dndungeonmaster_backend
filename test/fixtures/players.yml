@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  subtitle: MyString
+  race: MyString
+  characterClass: MyString
+  level: MyString
+  strength: MyString
+  dexterity: MyString
+  constitution: MyString
+  intelligence: MyString
+  wisdom: MyString
+  charisma: MyString
+  initiative: MyString
+  armor_class: MyString
+  passive_perception: MyString
+  hit_points: MyString
+  proficiency_bonus: MyString
+  speed: MyString
+  player_name: MyString
+  image_url: MyString
+  id: MyString
+  actions: MyString
+  equipment: MyString
+
+two:
+  user: two
+  name: MyString
+  subtitle: MyString
+  race: MyString
+  characterClass: MyString
+  level: MyString
+  strength: MyString
+  dexterity: MyString
+  constitution: MyString
+  intelligence: MyString
+  wisdom: MyString
+  charisma: MyString
+  initiative: MyString
+  armor_class: MyString
+  passive_perception: MyString
+  hit_points: MyString
+  proficiency_bonus: MyString
+  speed: MyString
+  player_name: MyString
+  image_url: MyString
+  id: MyString
+  actions: MyString
+  equipment: MyString
