@@ -46,6 +46,6 @@ class RegionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def region_params
-      params.require(:region).permit(:plane, :continent, :area, :climate, :terrain, :user_id)
+      params.require(:region).permit(:plane, :continent, :area, :climate, :terrain, :user_id).merge(user_id: @user.id)
     end
 end
