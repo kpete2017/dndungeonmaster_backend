@@ -3,7 +3,7 @@ class RegionsController < ApplicationController
 
   # GET /regions
   def index
-    @regions = Region.all
+    @regions = Region.where(user_id: @user.id)
 
     render json: @regions
   end
