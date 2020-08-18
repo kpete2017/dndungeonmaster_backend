@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Ally.destroy_all
 Rotation.destroy_all
 Region.destroy_all
 Note.destroy_all
@@ -20,7 +21,7 @@ user1 = User.create({
     password: "Guitarman2"
 })
 
-Player.create({
+player1 = Player.create({
     name: "Vitch",
     subtitle: "von carstein",
     race: "Elf",
@@ -45,7 +46,7 @@ Player.create({
     user_id: user1.id
 })
 
-Player.create({
+player2 = Player.create({
     name: "Othellia",
     subtitle: "of House Lumineer",
     race: "Half-Elf",
@@ -70,7 +71,7 @@ Player.create({
     user_id: user1.id
 })
 
-Player.create({
+player3 = Player.create({
     name: "Jason",
     subtitle: "Of Clan Momoa",
     race: "Human",
@@ -145,7 +146,7 @@ Player.create({
     user_id: user1.id
 })
 
-Npc.create({
+npc1 = Npc.create({
     name: "King Radavan",
     subtitle: "King of the Rooks",
     race: "Human",
@@ -229,3 +230,24 @@ Rotation.create({
     name: "Othellia",
     user_id: user1.id
 })
+
+Ally.create({
+    user_id: user1.id,
+    player_id: player1.id
+})
+
+Ally.create({
+    user_id: user1.id,
+    player_id: player2.id
+})
+
+Ally.create({
+    user_id: user1.id,
+    player_id: player3.id
+})
+
+Ally.create({
+    user_id: user1.id,
+    npc_id: npc1.id
+})
+

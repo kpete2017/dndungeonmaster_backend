@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :allies
   resources :rotations
   resources :regions
   resources :notes

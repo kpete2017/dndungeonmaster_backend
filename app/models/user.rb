@@ -6,6 +6,7 @@ class User < ApplicationRecord
     has_many :notes
     has_many :regions
     has_many :rotations
+    has_many :allies
 
     validates :username, uniqueness: true
 end
