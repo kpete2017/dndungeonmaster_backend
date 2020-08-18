@@ -86,7 +86,6 @@ ActiveRecord::Schema.define(version: 2020_08_17_235412) do
     t.string "area"
     t.string "climate"
     t.string "terrain"
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_regions_on_user_id"
