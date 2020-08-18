@@ -10,7 +10,7 @@ class AuthenticationController < ApplicationController
           payload = { user_id: @user.id }
           secret = ENV['SECRET_KEY_BASE'] || Rails.application.secrets.secret_key_base
           token = create_token(payload)
-          render json: { username: @user.username, name: @user.name, notes: @user.notes, players: @user.players, npcs: @user.npcs, token: token }
+          render json: { username: @user.username, name: @user.name, notes: @user.notes, players: @user.players, npcs: @user.npcs, regions: @user.regions, token: token }
         else
           render json: { message: "Please try again!!!" }
         end
