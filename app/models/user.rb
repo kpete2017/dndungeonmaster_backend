@@ -5,6 +5,7 @@ class User < ApplicationRecord
     has_many :players
     has_many :notes
     has_many :regions
+    has_many :rotations
 
     validates :username, uniqueness: true
 end

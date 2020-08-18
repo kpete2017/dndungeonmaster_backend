@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rotations
   resources :regions
   resources :notes
   resources :npcs

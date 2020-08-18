@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Rotation.destroy_all
 Region.destroy_all
 Note.destroy_all
 Npc.destroy_all
@@ -201,5 +202,30 @@ Region.create({
     area: "Waterdeep Outskirts",
     climate: "Temperate",
     terrain: "Forest",
+    user_id: user1.id
+})
+
+Rotation.create({
+    name: "Werebear",
+    user_id: user1.id
+})
+
+Rotation.create({
+    name: "Vitch",
+    user_id: user1.id
+})
+
+Rotation.create({
+    name: "Jason",
+    user_id: user1.id
+})
+
+Rotation.create({
+    name: "Owlbear",
+    user_id: user1.id
+})
+
+Rotation.create({
+    name: "Othellia",
     user_id: user1.id
 })
