@@ -46,6 +46,6 @@ class RotationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def rotation_params
-      params.require(:rotation).permit(:name, :user_id)
+      params.require(:rotation).permit(:name, :user_id).merge(user_id: @user.id)
     end
 end
