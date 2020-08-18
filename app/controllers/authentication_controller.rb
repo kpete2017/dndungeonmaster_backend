@@ -17,7 +17,7 @@ class AuthenticationController < ApplicationController
           players: @user.players, 
           npcs: @user.npcs, 
           regions: @user.regions, 
-          rotations: @user.rotations 
+          rotations: @user.rotations, 
           token: token }
         else
           render json: { message: "Please try again!!!" }
