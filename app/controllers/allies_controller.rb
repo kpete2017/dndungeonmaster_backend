@@ -46,6 +46,6 @@ class AlliesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def ally_params
-      params.require(:ally).permit(:player_id, :user_id)
+      params.require(:ally).permit(:player_id, :user_id).merge(user_id: @user.id)
     end
 end
