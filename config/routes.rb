@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :enemies
   resources :allies
   resources :rotations
   resources :regions

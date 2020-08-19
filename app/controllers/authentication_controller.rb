@@ -19,7 +19,9 @@ class AuthenticationController < ApplicationController
           regions: @user.regions, 
           rotations: @user.rotations, 
           allies: @user.allies,
-          token: token }
+          enemies: @user.enemies,
+          token: token 
+        }
         else
           render json: { message: "Please try again!!!" }
         end

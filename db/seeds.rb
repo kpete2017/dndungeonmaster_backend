@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Enemy.destroy_all
 Ally.destroy_all
 Rotation.destroy_all
 Region.destroy_all
@@ -250,4 +251,5 @@ Ally.create({
     user_id: user1.id,
     npc_id: npc1.id
 })
+
 

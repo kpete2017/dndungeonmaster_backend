@@ -1,0 +1,59 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  meta: MyString
+  armor_class: MyString
+  hit_points: MyString
+  Speed: MyString
+  STR: MyString
+  STR_mod: MyString
+  DEX: MyString
+  DEX_mod: MyString
+  CON: MyString
+  CON_mod: MyString
+  INT: MyString
+  INT_mod: MyString
+  WIS: MyString
+  WIS_mod: MyString
+  CHA: MyString
+  CHA_mod: MyString
+  Saving_Throws: MyString
+  Skills: MyString
+  Senses: MyString
+  Languages: MyString
+  level: MyString
+  Traits: MyString
+  Actions: MyString
+  Legendary_Actions: MyString
+  image_url: MyString
+  user: one
+
+two:
+  name: MyString
+  meta: MyString
+  armor_class: MyString
+  hit_points: MyString
+  Speed: MyString
+  STR: MyString
+  STR_mod: MyString
+  DEX: MyString
+  DEX_mod: MyString
+  CON: MyString
+  CON_mod: MyString
+  INT: MyString
+  INT_mod: MyString
+  WIS: MyString
+  WIS_mod: MyString
+  CHA: MyString
+  CHA_mod: MyString
+  Saving_Throws: MyString
+  Skills: MyString
+  Senses: MyString
+  Languages: MyString
+  level: MyString
+  Traits: MyString
+  Actions: MyString
+  Legendary_Actions: MyString
+  image_url: MyString
+  user: two

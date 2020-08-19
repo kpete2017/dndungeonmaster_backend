@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_184848) do
+ActiveRecord::Schema.define(version: 2020_08_19_003117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,39 @@ ActiveRecord::Schema.define(version: 2020_08_18_184848) do
     t.index ["npc_id"], name: "index_allies_on_npc_id"
     t.index ["player_id"], name: "index_allies_on_player_id"
     t.index ["user_id"], name: "index_allies_on_user_id"
+  end
+
+  create_table "enemies", force: :cascade do |t|
+    t.string "name"
+    t.string "meta"
+    t.string "armor_class"
+    t.string "hit_points"
+    t.string "Speed"
+    t.string "STR"
+    t.string "STR_mod"
+    t.string "DEX"
+    t.string "DEX_mod"
+    t.string "CON"
+    t.string "CON_mod"
+    t.string "INT"
+    t.string "INT_mod"
+    t.string "WIS"
+    t.string "WIS_mod"
+    t.string "CHA"
+    t.string "CHA_mod"
+    t.string "Saving_Throws"
+    t.string "Skills"
+    t.string "Senses"
+    t.string "Languages"
+    t.string "level"
+    t.string "Traits"
+    t.string "Actions"
+    t.string "Legendary_Actions"
+    t.string "image_url"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_enemies_on_user_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -123,6 +156,7 @@ ActiveRecord::Schema.define(version: 2020_08_18_184848) do
   add_foreign_key "allies", "npcs"
   add_foreign_key "allies", "players"
   add_foreign_key "allies", "users"
+  add_foreign_key "enemies", "users"
   add_foreign_key "notes", "users"
   add_foreign_key "npcs", "users"
   add_foreign_key "players", "users"
