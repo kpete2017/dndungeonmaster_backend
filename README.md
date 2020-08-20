@@ -42,7 +42,7 @@ It does this by:
 
 There is a seperate repositiory for the Vue frontend. 
 
-[Frontend](https://github.com/kpete2017/D-DungeonMaster.git)
+[Frontend](https://github.com/kpete2017/DnDungeonMaster)
 
 
 ### Prerequisites
