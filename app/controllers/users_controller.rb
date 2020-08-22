@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     def create
       @user = User.create({
         username: params[:username],
-        password: params[:password]
+        password: params[:password],
+        name: params[:name]
       })
   
       payload = { user_id: @user.id}
