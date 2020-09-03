@@ -17,9 +17,9 @@ User.destroy_all
 
 
 user1 = User.create({
-    username: "kpete2017",
-    name: "The_All_Powerful_Kyle",
-    password: "Guitarman2"
+    username: "DefaultUser",
+    name: "Default User Name",
+    password: "Password2!"
 })
 
 player1 = Player.create({
