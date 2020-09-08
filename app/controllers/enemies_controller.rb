@@ -16,7 +16,6 @@ class EnemiesController < ApplicationController
   # POST /enemies
   def create
     @enemy = Enemy.new(enemy_params)
-
     if @enemy.save
       render json: @enemy, status: :created, location: @enemy
     else
@@ -48,4 +47,5 @@ class EnemiesController < ApplicationController
     def enemy_params
       params.require(:enemy).permit(:name, :meta, :armor_class, :hit_points, :Speed, :STR, :STR_mod, :DEX, :DEX_mod, :CON, :CON_mod, :INT, :INT_mod, :WIS, :WIS_mod, :CHA, :CHA_mod, :Saving_Throws, :Skills, :Senses, :Languages, :level, :Traits, :Actions, :Legendary_Actions, :image_url, :user_id).merge(user_id: @user.id)
     end
+    
 end
