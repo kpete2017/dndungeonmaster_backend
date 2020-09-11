@@ -22,10 +22,10 @@ class AuthenticationController < ApplicationController
             token: token 
           }
         else
-          render json: { message: "Please try again!!!" }
+          render json: { message: "Authentication Failed" }
         end
       else
-        render json: { message: "Please try again" }
+        render json: { message: "Could not find user" }
       end
     end
 end
