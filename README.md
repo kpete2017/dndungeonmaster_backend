@@ -23,11 +23,6 @@
 
 D&DungeonMaster is a powerful tool that helps Dungeon Master's everywhere keep their game sessions organized and accessable.
 
-It does this by:
-* Keeping all the player and enemy information accessible from the home screen with a simple click.
-* Keeping an advanced compendium of every spell and monster officailly in Dungeons & Dragons 5th Edition.
-* Keeping all the players equipment, spells, and other notes in one easy to access place.
-
 ### Built With
 * [Vue.js](https://vuejs.org/)
 * [Ruby On Rails](https://rubyonrails.org/)
