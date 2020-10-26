@@ -22,16 +22,16 @@ class ApplicationController < ActionController::API
                 user_id = payload["user_id"]
                 @user = User.find(user_id)
             rescue
-                render json: { message: "NOT ALLOWED!!!" }, status: :forbidden
+                render json: { message: "Could not create token" }, status: :forbidden
             end
         else
-            render json: { message: "Not allowed" }, status: :forbidden
+            render json: { message: "Auth header does not exist" }, status: :forbidden
         end
     end
 
     def permssion(level)
         if @user.permission < level 
-            render json: { message: "Not Allowed!!!!!!!!!"}, status: :forbidden
+            render json: { message: "User does not have enough permission"}, status: :forbidden
         end
     end
 

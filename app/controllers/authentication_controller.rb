@@ -28,4 +28,5 @@ class AuthenticationController < ApplicationController
         render json: { message: "Could not find user" }
       end
     end
+    
 end
